@@ -1,0 +1,29 @@
+--Create a clothing store database
+
+CREATE TABLE fashionista(id INTEGER PRIMARY KEY, item TEXT, size INTEGER, color TEXT, quantity INTEGER, price INTEGER);
+
+INSERT INTO fashionista VALUES(1, 'Skirt', 4, 'Black', 3, 15);
+INSERT INTO fashionista VALUES(2, 'Jeans', 5, 'Blue', 2, 25);
+INSERT INTO fashionista VALUES(3, 'Dress', 4, 'Red', 1, 30);
+INSERT INTO fashionista VALUES(4, 'Hat', 0, 'White/Black', 4, 15);
+INSERT INTO fashionista VALUES(5, 'Scarf', 0, 'Gray', 8, 10);
+INSERT INTO fashionista VALUES(6, 'Bikini Set', 8, 'Red', 4, 40);
+INSERT INTO fashionista VALUES(7, 'Pajamas Set', 6, 'Green', 3, 25);
+INSERT INTO fashionista VALUES(8, 'Shirt', 4, 'Brown', 5, 10);
+INSERT INTO fashionista VALUES(9, 'Socks', 7, 'White', 4, 15);
+INSERT INTO fashionista VALUES(10, 'Underwear', 4, 'Pink', 3, 5);
+INSERT INTO fashionista VALUES(11, 'Flip Flops', 7, 'White', 3, 15);
+INSERT INTO fashionista VALUES(12, 'Shoes', 7, 'Black', 2, 45);
+INSERT INTO fashionista VALUES(13, 'Sweatshirt', 8, 'Black', 2, 40);
+INSERT INTO fashionista VALUES(14, 'Beanie', 0, 'Black', 5, 20);
+INSERT INTO fashionista VALUES(15, 'Leggings', 8, 'Gray', 4, 18);
+
+--display the database ordered by price.
+SELECT * FROM fashionista ORDER BY price;
+
+--what is the max size sold at this store?
+SELECT max(size) FROM fashionista;
+
+--which clothing is available in the color black?
+SELECT * FROM fashionista WHERE color = 'Black';
+
